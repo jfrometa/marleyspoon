@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BCE248A5-EAA3-47E6-9F47-AB2FF0084FE8"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E30B0C6-B35C-4502-9EF2-0F68910BA259"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "marleyspoonlist/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D27D66D-BE43-4B02-B112-33AFA88AEE75"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "marleyspoonlist/Modules/RecipiesList/RecipiesView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9D27D66D-BE43-4B02-B112-33AFA88AEE75 - 31dfff20336de35d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "marleyspoonlist.RecipiesView.__allocating_init() -&gt; marleyspoonlist.RecipiesView"
+                  moduleName = "marleyspoonlist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aidamdv/Downloads/Tests/marleyspoonlist/marleyspoonlist/Modules/RecipiesList/RecipiesView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "9D27D66D-BE43-4B02-B112-33AFA88AEE75 - 3fb408f28cd4463d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "marleyspoonlist.RecipiesView.init() -&gt; marleyspoonlist.RecipiesView"
+                  moduleName = "marleyspoonlist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aidamdv/Downloads/Tests/marleyspoonlist/marleyspoonlist/Modules/RecipiesList/RecipiesView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
