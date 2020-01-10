@@ -6,4 +6,13 @@
 //  Copyright © 2020 Jose Frometa. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension String {
+func attributed(_ size: CGFloat = 16, _ color: UIColor = UIColor.black) -> NSMutableAttributedString {
+  return NSMutableAttributedString(string: self, attributes: [
+    .font: UIFont.systemFont(ofSize: size),
+    .foregroundColor: color,
+  ])
+}
+}

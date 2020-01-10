@@ -3,18 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66CE33450B288E1B599DAE5A /* Pods_marleyspoonlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0DB5EAEF64A3BE1E259221 /* Pods_marleyspoonlist.framework */; };
 		8EEE0E4B23C500A800001AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E4A23C500A800001AF8 /* AppDelegate.swift */; };
 		8EEE0E4D23C500A800001AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E4C23C500A800001AF8 /* SceneDelegate.swift */; };
-		8EEE0E4F23C500A800001AF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E4E23C500A800001AF8 /* ViewController.swift */; };
-		8EEE0E5223C500A800001AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE0E5023C500A800001AF8 /* Main.storyboard */; };
+		8EEE0E4F23C500A800001AF8 /* RecepiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E4E23C500A800001AF8 /* RecepiesListViewController.swift */; };
 		8EEE0E5423C500A900001AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE0E5323C500A900001AF8 /* Assets.xcassets */; };
 		8EEE0E5723C500A900001AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE0E5523C500A900001AF8 /* LaunchScreen.storyboard */; };
 		8EEE0E6223C500A900001AF8 /* marleyspoonlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E6123C500A900001AF8 /* marleyspoonlistTests.swift */; };
 		8EEE0E6D23C500A900001AF8 /* marleyspoonlistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E6C23C500A900001AF8 /* marleyspoonlistUITests.swift */; };
+		8EEE0E7F23C7B84800001AF8 /* UIImageView+Contentful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E7E23C7B84800001AF8 /* UIImageView+Contentful.swift */; };
+		8EEE0E8223C7C38000001AF8 /* ContentfulManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E8123C7C38000001AF8 /* ContentfulManager.swift */; };
+		8EEE0E8623C7C7A200001AF8 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E8523C7C7A200001AF8 /* Recipe.swift */; };
+		8EEE0E8823C7C7AD00001AF8 /* Chef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E8723C7C7AD00001AF8 /* Chef.swift */; };
+		8EEE0E8A23C7C7B700001AF8 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E8923C7C7B700001AF8 /* Tag.swift */; };
+		8EEE0E8F23C7D90600001AF8 /* RecipiesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E8E23C7D90600001AF8 /* RecipiesListViewModel.swift */; };
+		8EEE0E9123C7D93A00001AF8 /* RecipiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9023C7D93A00001AF8 /* RecipiesView.swift */; };
+		8EEE0E9323C7DA7900001AF8 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9223C7DA7900001AF8 /* ViewModelType.swift */; };
+		8EEE0E9623C7DB0500001AF8 /* RecipiesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9523C7DB0500001AF8 /* RecipiesNavigator.swift */; };
+		8EEE0E9823C7E04400001AF8 /* RecipiesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9723C7E04400001AF8 /* RecipiesSection.swift */; };
+		8EEE0E9B23C7E12B00001AF8 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9A23C7E12B00001AF8 /* RecipeDetailsViewController.swift */; };
+		8EEE0E9D23C7E13E00001AF8 /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9C23C7E13E00001AF8 /* RecipeDetailsViewModel.swift */; };
+		8EEE0E9F23C7E14C00001AF8 /* RecipieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9E23C7E14C00001AF8 /* RecipieDetailsView.swift */; };
+		8EEE0EA223C8287200001AF8 /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0EA123C8287200001AF8 /* RecipeCellView.swift */; };
+		8EEE0EA423C82CE800001AF8 /* StringToAttributedText+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0EA323C82CE800001AF8 /* StringToAttributedText+ext.swift */; };
+		8F386168A9FA9E152CC57A68 /* libPods-marleyspoonlistTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29147CB29ED2DBE8C64D6A50 /* libPods-marleyspoonlistTests.a */; };
+		CEDDB32EBD38E0B979E604E4 /* libPods-marleyspoonlistUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB9D52A6879D55A0C78072 /* libPods-marleyspoonlistUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +52,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04CB9D52A6879D55A0C78072 /* libPods-marleyspoonlistUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-marleyspoonlistUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29147CB29ED2DBE8C64D6A50 /* libPods-marleyspoonlistTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-marleyspoonlistTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		381F34F36A338931C52E1B88 /* Pods-marleyspoonlistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marleyspoonlistTests.debug.xcconfig"; path = "Target Support Files/Pods-marleyspoonlistTests/Pods-marleyspoonlistTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3950B44F9BD05BEC88E77CF2 /* Pods-marleyspoonlistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marleyspoonlistUITests.release.xcconfig"; path = "Target Support Files/Pods-marleyspoonlistUITests/Pods-marleyspoonlistUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4EB18EA69B9182AA62085B4B /* Pods-marleyspoonlistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marleyspoonlistTests.release.xcconfig"; path = "Target Support Files/Pods-marleyspoonlistTests/Pods-marleyspoonlistTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A3ACFACD6D4E2073C34483B /* Pods-marleyspoonlistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marleyspoonlistUITests.debug.xcconfig"; path = "Target Support Files/Pods-marleyspoonlistUITests/Pods-marleyspoonlistUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		632CD2815A913937E720FAD9 /* Pods-marleyspoonlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marleyspoonlist.debug.xcconfig"; path = "Target Support Files/Pods-marleyspoonlist/Pods-marleyspoonlist.debug.xcconfig"; sourceTree = "<group>"; };
 		8EEE0E4723C500A800001AF8 /* marleyspoonlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marleyspoonlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EEE0E4A23C500A800001AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EEE0E4C23C500A800001AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8EEE0E4E23C500A800001AF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8EEE0E5123C500A800001AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EEE0E4E23C500A800001AF8 /* RecepiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepiesListViewController.swift; sourceTree = "<group>"; };
 		8EEE0E5323C500A900001AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EEE0E5623C500A900001AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EEE0E5823C500A900001AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +72,23 @@
 		8EEE0E6823C500A900001AF8 /* marleyspoonlistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marleyspoonlistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EEE0E6C23C500A900001AF8 /* marleyspoonlistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marleyspoonlistUITests.swift; sourceTree = "<group>"; };
 		8EEE0E6E23C500A900001AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EEE0E7E23C7B84800001AF8 /* UIImageView+Contentful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Contentful.swift"; sourceTree = "<group>"; };
+		8EEE0E8123C7C38000001AF8 /* ContentfulManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentfulManager.swift; sourceTree = "<group>"; };
+		8EEE0E8523C7C7A200001AF8 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		8EEE0E8723C7C7AD00001AF8 /* Chef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chef.swift; sourceTree = "<group>"; };
+		8EEE0E8923C7C7B700001AF8 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		8EEE0E8E23C7D90600001AF8 /* RecipiesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesListViewModel.swift; sourceTree = "<group>"; };
+		8EEE0E9023C7D93A00001AF8 /* RecipiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesView.swift; sourceTree = "<group>"; };
+		8EEE0E9223C7DA7900001AF8 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		8EEE0E9523C7DB0500001AF8 /* RecipiesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesNavigator.swift; sourceTree = "<group>"; };
+		8EEE0E9723C7E04400001AF8 /* RecipiesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesSection.swift; sourceTree = "<group>"; };
+		8EEE0E9A23C7E12B00001AF8 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		8EEE0E9C23C7E13E00001AF8 /* RecipeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModel.swift; sourceTree = "<group>"; };
+		8EEE0E9E23C7E14C00001AF8 /* RecipieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieDetailsView.swift; sourceTree = "<group>"; };
+		8EEE0EA123C8287200001AF8 /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
+		8EEE0EA323C82CE800001AF8 /* StringToAttributedText+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringToAttributedText+ext.swift"; sourceTree = "<group>"; };
+		B1FE4116579FD5414638258E /* Pods-marleyspoonlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marleyspoonlist.release.xcconfig"; path = "Target Support Files/Pods-marleyspoonlist/Pods-marleyspoonlist.release.xcconfig"; sourceTree = "<group>"; };
+		ED0DB5EAEF64A3BE1E259221 /* Pods_marleyspoonlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marleyspoonlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66CE33450B288E1B599DAE5A /* Pods_marleyspoonlist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F386168A9FA9E152CC57A68 /* libPods-marleyspoonlistTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +112,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDDB32EBD38E0B979E604E4 /* libPods-marleyspoonlistUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		317F21C059EFD74861477DE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				632CD2815A913937E720FAD9 /* Pods-marleyspoonlist.debug.xcconfig */,
+				B1FE4116579FD5414638258E /* Pods-marleyspoonlist.release.xcconfig */,
+				381F34F36A338931C52E1B88 /* Pods-marleyspoonlistTests.debug.xcconfig */,
+				4EB18EA69B9182AA62085B4B /* Pods-marleyspoonlistTests.release.xcconfig */,
+				5A3ACFACD6D4E2073C34483B /* Pods-marleyspoonlistUITests.debug.xcconfig */,
+				3950B44F9BD05BEC88E77CF2 /* Pods-marleyspoonlistUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		479A75347B7647EE2FA98C28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED0DB5EAEF64A3BE1E259221 /* Pods_marleyspoonlist.framework */,
+				29147CB29ED2DBE8C64D6A50 /* libPods-marleyspoonlistTests.a */,
+				04CB9D52A6879D55A0C78072 /* libPods-marleyspoonlistUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8EEE0E3E23C500A800001AF8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +149,8 @@
 				8EEE0E6023C500A900001AF8 /* marleyspoonlistTests */,
 				8EEE0E6B23C500A900001AF8 /* marleyspoonlistUITests */,
 				8EEE0E4823C500A800001AF8 /* Products */,
+				317F21C059EFD74861477DE6 /* Pods */,
+				479A75347B7647EE2FA98C28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +167,11 @@
 		8EEE0E4923C500A800001AF8 /* marleyspoonlist */ = {
 			isa = PBXGroup;
 			children = (
-				8EEE0E4A23C500A800001AF8 /* AppDelegate.swift */,
-				8EEE0E4C23C500A800001AF8 /* SceneDelegate.swift */,
-				8EEE0E4E23C500A800001AF8 /* ViewController.swift */,
-				8EEE0E5023C500A800001AF8 /* Main.storyboard */,
-				8EEE0E5323C500A900001AF8 /* Assets.xcassets */,
-				8EEE0E5523C500A900001AF8 /* LaunchScreen.storyboard */,
+				8EEE0EA623C8302200001AF8 /* Assets */,
+				8EEE0EA523C8300D00001AF8 /* Application */,
+				8EEE0E8B23C7D05F00001AF8 /* Modules */,
+				8EEE0E8323C7C40B00001AF8 /* Networking */,
+				8EEE0E7D23C7B81F00001AF8 /* Helpers */,
 				8EEE0E5823C500A900001AF8 /* Info.plist */,
 			);
 			path = marleyspoonlist;
@@ -128,6 +195,117 @@
 			path = marleyspoonlistUITests;
 			sourceTree = "<group>";
 		};
+		8EEE0E7D23C7B81F00001AF8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0E7E23C7B84800001AF8 /* UIImageView+Contentful.swift */,
+				8EEE0E9223C7DA7900001AF8 /* ViewModelType.swift */,
+				8EEE0EA323C82CE800001AF8 /* StringToAttributedText+ext.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8EEE0E8023C7C36200001AF8 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0E8123C7C38000001AF8 /* ContentfulManager.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		8EEE0E8323C7C40B00001AF8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0E8423C7C41B00001AF8 /* Responses */,
+				8EEE0E8023C7C36200001AF8 /* Provider */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8EEE0E8423C7C41B00001AF8 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0E8523C7C7A200001AF8 /* Recipe.swift */,
+				8EEE0E8723C7C7AD00001AF8 /* Chef.swift */,
+				8EEE0E8923C7C7B700001AF8 /* Tag.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		8EEE0E8B23C7D05F00001AF8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0E9423C7DAE300001AF8 /* Navigators */,
+				8EEE0E8D23C7D15B00001AF8 /* RecipeDetails */,
+				8EEE0E8C23C7D12000001AF8 /* RecipiesList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8EEE0E8C23C7D12000001AF8 /* RecipiesList */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0EA023C7E1CF00001AF8 /* Entity */,
+				8EEE0E9923C7E05E00001AF8 /* Cell */,
+				8EEE0E4E23C500A800001AF8 /* RecepiesListViewController.swift */,
+				8EEE0E8E23C7D90600001AF8 /* RecipiesListViewModel.swift */,
+				8EEE0E9023C7D93A00001AF8 /* RecipiesView.swift */,
+			);
+			path = RecipiesList;
+			sourceTree = "<group>";
+		};
+		8EEE0E8D23C7D15B00001AF8 /* RecipeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0E9A23C7E12B00001AF8 /* RecipeDetailsViewController.swift */,
+				8EEE0E9C23C7E13E00001AF8 /* RecipeDetailsViewModel.swift */,
+				8EEE0E9E23C7E14C00001AF8 /* RecipieDetailsView.swift */,
+			);
+			path = RecipeDetails;
+			sourceTree = "<group>";
+		};
+		8EEE0E9423C7DAE300001AF8 /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0E9523C7DB0500001AF8 /* RecipiesNavigator.swift */,
+			);
+			path = Navigators;
+			sourceTree = "<group>";
+		};
+		8EEE0E9923C7E05E00001AF8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0EA123C8287200001AF8 /* RecipeCellView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8EEE0EA023C7E1CF00001AF8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0E9723C7E04400001AF8 /* RecipiesSection.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		8EEE0EA523C8300D00001AF8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0E4A23C500A800001AF8 /* AppDelegate.swift */,
+				8EEE0E4C23C500A800001AF8 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8EEE0EA623C8302200001AF8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE0E5323C500A900001AF8 /* Assets.xcassets */,
+				8EEE0E5523C500A900001AF8 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +313,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EEE0E7123C500A900001AF8 /* Build configuration list for PBXNativeTarget "marleyspoonlist" */;
 			buildPhases = (
+				E562FC469FEB703C3BEE8F12 /* [CP] Check Pods Manifest.lock */,
 				8EEE0E4323C500A800001AF8 /* Sources */,
 				8EEE0E4423C500A800001AF8 /* Frameworks */,
 				8EEE0E4523C500A800001AF8 /* Resources */,
+				C999D6C944D164AF2CF81777 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +332,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EEE0E7423C500A900001AF8 /* Build configuration list for PBXNativeTarget "marleyspoonlistTests" */;
 			buildPhases = (
+				9FC79F6EA1816BD31352D0B3 /* [CP] Check Pods Manifest.lock */,
 				8EEE0E5923C500A900001AF8 /* Sources */,
 				8EEE0E5A23C500A900001AF8 /* Frameworks */,
 				8EEE0E5B23C500A900001AF8 /* Resources */,
@@ -170,6 +351,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EEE0E7723C500A900001AF8 /* Build configuration list for PBXNativeTarget "marleyspoonlistUITests" */;
 			buildPhases = (
+				2E25E1C64FBE4FB8B61877B6 /* [CP] Check Pods Manifest.lock */,
 				8EEE0E6423C500A900001AF8 /* Sources */,
 				8EEE0E6523C500A900001AF8 /* Frameworks */,
 				8EEE0E6623C500A900001AF8 /* Resources */,
@@ -234,7 +416,6 @@
 			files = (
 				8EEE0E5723C500A900001AF8 /* LaunchScreen.storyboard in Resources */,
 				8EEE0E5423C500A900001AF8 /* Assets.xcassets in Resources */,
-				8EEE0E5223C500A800001AF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +435,114 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E25E1C64FBE4FB8B61877B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-marleyspoonlistUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC79F6EA1816BD31352D0B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-marleyspoonlistTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C999D6C944D164AF2CF81777 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marleyspoonlist/Pods-marleyspoonlist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marleyspoonlist/Pods-marleyspoonlist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-marleyspoonlist/Pods-marleyspoonlist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E562FC469FEB703C3BEE8F12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-marleyspoonlist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8EEE0E4323C500A800001AF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EEE0E4F23C500A800001AF8 /* ViewController.swift in Sources */,
+				8EEE0E9323C7DA7900001AF8 /* ViewModelType.swift in Sources */,
+				8EEE0E9D23C7E13E00001AF8 /* RecipeDetailsViewModel.swift in Sources */,
+				8EEE0E8F23C7D90600001AF8 /* RecipiesListViewModel.swift in Sources */,
+				8EEE0E8A23C7C7B700001AF8 /* Tag.swift in Sources */,
+				8EEE0E9B23C7E12B00001AF8 /* RecipeDetailsViewController.swift in Sources */,
+				8EEE0E9F23C7E14C00001AF8 /* RecipieDetailsView.swift in Sources */,
+				8EEE0E7F23C7B84800001AF8 /* UIImageView+Contentful.swift in Sources */,
+				8EEE0E4F23C500A800001AF8 /* RecepiesListViewController.swift in Sources */,
+				8EEE0EA223C8287200001AF8 /* RecipeCellView.swift in Sources */,
+				8EEE0E9823C7E04400001AF8 /* RecipiesSection.swift in Sources */,
+				8EEE0E9623C7DB0500001AF8 /* RecipiesNavigator.swift in Sources */,
 				8EEE0E4B23C500A800001AF8 /* AppDelegate.swift in Sources */,
+				8EEE0EA423C82CE800001AF8 /* StringToAttributedText+ext.swift in Sources */,
+				8EEE0E8623C7C7A200001AF8 /* Recipe.swift in Sources */,
+				8EEE0E8223C7C38000001AF8 /* ContentfulManager.swift in Sources */,
+				8EEE0E8823C7C7AD00001AF8 /* Chef.swift in Sources */,
+				8EEE0E9123C7D93A00001AF8 /* RecipiesView.swift in Sources */,
 				8EEE0E4D23C500A800001AF8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +579,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8EEE0E5023C500A800001AF8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8EEE0E5123C500A800001AF8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8EEE0E5523C500A900001AF8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,6 +706,7 @@
 		};
 		8EEE0E7223C500A900001AF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 632CD2815A913937E720FAD9 /* Pods-marleyspoonlist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -444,12 +719,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jfrometa.marleyspoonlist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8EEE0E7323C500A900001AF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1FE4116579FD5414638258E /* Pods-marleyspoonlist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,12 +738,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jfrometa.marleyspoonlist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		8EEE0E7523C500A900001AF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 381F34F36A338931C52E1B88 /* Pods-marleyspoonlistTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +767,7 @@
 		};
 		8EEE0E7623C500A900001AF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EB18EA69B9182AA62085B4B /* Pods-marleyspoonlistTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +790,7 @@
 		};
 		8EEE0E7823C500A900001AF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A3ACFACD6D4E2073C34483B /* Pods-marleyspoonlistUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +811,7 @@
 		};
 		8EEE0E7923C500A900001AF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3950B44F9BD05BEC88E77CF2 /* Pods-marleyspoonlistUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import RxCocoa
+import RxSwift
+
+class RecipieDetailsViewModel: ViewModelType {
+     
+       struct Input {
+        let trigger: Driver<Void>
+      }
+
+      struct Output {
+        let data: Driver<Void>
+      }
+      
+    func transform(input: RecipieDetailsViewModel.Input) -> RecipieDetailsViewModel.Output {
+        let data = input.trigger
+        return Output(data: data)
+    }
+}
