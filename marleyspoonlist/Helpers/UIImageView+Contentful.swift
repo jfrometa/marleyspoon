@@ -8,8 +8,8 @@ extension UIImageView {
                                  additionalOptions: [ImageOption] = [],
                                  heightConstraint: NSLayoutConstraint? = nil) {
         
-        guard let width = asset.file?.details?.imageInfo?.width else { return }
-        guard let height = asset.file?.details?.imageInfo?.height else { return }
+        let width = Double(40)
+        let height = Double(40)
 
         let scale = UIScreen.main.scale
         let viewWidthInPx = Double(frame.width * scale)
@@ -21,14 +21,14 @@ extension UIImageView {
         heightConstraint?.constant = CGFloat(round(viewHeightInPoints))
 
         let imageOptions: [ImageOption] = [
-            .formatAs(.jpg(withQuality: .asPercent(100))),
+            .formatAs(.jpg(withQuality: .asPercent(50))),
             .width(UInt(viewWidthInPx)),
             .height(UInt(viewHeightInPx)),
         ] + additionalOptions
 
-        let url = try! asset.url(with: imageOptions)
-
-        self.setImage(with: url)
+//        let url = try! asset.url(with: imageOptions)
+//
+//        self.setImage(with: url)
 //        af_setImage(withURL: url,
 //                    placeholderImage: nil,
 //                    imageTransition: .crossDissolve(0.5),

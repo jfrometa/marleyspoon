@@ -30,6 +30,7 @@
 		8EEE0E9F23C7E14C00001AF8 /* RecipieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9E23C7E14C00001AF8 /* RecipieDetailsView.swift */; };
 		8EEE0EA223C8287200001AF8 /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0EA123C8287200001AF8 /* RecipeCellView.swift */; };
 		8EEE0EA423C82CE800001AF8 /* StringToAttributedText+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0EA323C82CE800001AF8 /* StringToAttributedText+ext.swift */; };
+		8EEE0EA823C83F8B00001AF8 /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0EA723C83F8B00001AF8 /* Observable+Ext.swift */; };
 		8F386168A9FA9E152CC57A68 /* libPods-marleyspoonlistTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29147CB29ED2DBE8C64D6A50 /* libPods-marleyspoonlistTests.a */; };
 		CEDDB32EBD38E0B979E604E4 /* libPods-marleyspoonlistUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB9D52A6879D55A0C78072 /* libPods-marleyspoonlistUITests.a */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		8EEE0E9E23C7E14C00001AF8 /* RecipieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieDetailsView.swift; sourceTree = "<group>"; };
 		8EEE0EA123C8287200001AF8 /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
 		8EEE0EA323C82CE800001AF8 /* StringToAttributedText+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringToAttributedText+ext.swift"; sourceTree = "<group>"; };
+		8EEE0EA723C83F8B00001AF8 /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		B1FE4116579FD5414638258E /* Pods-marleyspoonlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marleyspoonlist.release.xcconfig"; path = "Target Support Files/Pods-marleyspoonlist/Pods-marleyspoonlist.release.xcconfig"; sourceTree = "<group>"; };
 		ED0DB5EAEF64A3BE1E259221 /* Pods_marleyspoonlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marleyspoonlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -201,6 +203,7 @@
 				8EEE0E7E23C7B84800001AF8 /* UIImageView+Contentful.swift */,
 				8EEE0E9223C7DA7900001AF8 /* ViewModelType.swift */,
 				8EEE0EA323C82CE800001AF8 /* StringToAttributedText+ext.swift */,
+				8EEE0EA723C83F8B00001AF8 /* Observable+Ext.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				8EEE0E8623C7C7A200001AF8 /* Recipe.swift in Sources */,
 				8EEE0E8223C7C38000001AF8 /* ContentfulManager.swift in Sources */,
 				8EEE0E8823C7C7AD00001AF8 /* Chef.swift in Sources */,
+				8EEE0EA823C83F8B00001AF8 /* Observable+Ext.swift in Sources */,
 				8EEE0E9123C7D93A00001AF8 /* RecipiesView.swift in Sources */,
 				8EEE0E4D23C500A800001AF8 /* SceneDelegate.swift in Sources */,
 			);

@@ -10,7 +10,7 @@ import UIKit
 
 protocol RecipiesNavigator {
     func goToRecipies(with viewModel: RecipiesListViewModel)
-    func goToRecipeDetails(with viewModel: RecipieDetailsViewModel)
+    func goToRecipeDetails(_ recipe: Recipe)
 }
 
 class DefaultRecipiesNavigator: RecipiesNavigator {
@@ -27,7 +27,7 @@ class DefaultRecipiesNavigator: RecipiesNavigator {
          navigationController.pushViewController(vc, animated: true)
     }
     
-    func goToRecipeDetails(with viewModel: RecipieDetailsViewModel) {
-        print("h")
+    func goToRecipeDetails(_ recipe: Recipe) {
+        print("goToRecipeDetails : \(recipe)")
     }
 }

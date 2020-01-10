@@ -43,6 +43,16 @@ class RecipeCellView: UITableViewCell {
       return view
   }()
 
+  var onClickListener: (() -> Void)?
+   
+  var recipe: Recipe? {
+    didSet{
+        self.lblTitle.attributedText = recipe?.title.attributed()
+        
+        guard let photo = recipe?.photo else { return }
+        self.ivIcon.setImageToNaturalHeight(fromAsset: photo)
+    }
+  }
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
@@ -52,6 +62,11 @@ class RecipeCellView: UITableViewCell {
     setView()
   }
 
+  @objc func onPress() {
+    guard let onClick = self.onClickListener else { return }
+    onClick()
+  }
+    
   private func setView() {
     
     addSubview(container)
@@ -66,6 +81,7 @@ class RecipeCellView: UITableViewCell {
 
     container.addSubview(ivIcon)
     container.addSubview(lblTitle)
+    container.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onPress)))
     
     constrain(ivIcon, lblTitle) {  ivIcon, lblTitle in
       guard let sv = ivIcon.superview else { return }

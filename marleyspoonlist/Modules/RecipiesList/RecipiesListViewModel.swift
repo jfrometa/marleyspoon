@@ -12,7 +12,7 @@ import RxSwift
 
 class RecipiesListViewModel: ViewModelType {
      private let provider: ContentfulManager!
-     private let navigator: RecipiesNavigator!
+     let navigator: RecipiesNavigator!
      private let disposeBag = DisposeBag()
     
     init(navigator: RecipiesNavigator, provider: ContentfulManager) {

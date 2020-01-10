@@ -10,7 +10,7 @@ import Cartography
 import UIKit
 
 class RecipiesView: UIView {
-    private let tableView = UITableView(frame: .zero, style: .plain)
+    let tableView = UITableView(frame: .zero, style: .plain)
     
     init() {
       super.init(frame: CGRect.zero)
