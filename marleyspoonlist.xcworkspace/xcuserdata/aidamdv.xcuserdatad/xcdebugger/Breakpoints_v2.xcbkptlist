@@ -22,7 +22,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9D27D66D-BE43-4B02-B112-33AFA88AEE75"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "marleyspoonlist/Modules/RecipiesList/RecipiesView.swift"
@@ -35,7 +35,7 @@
             <Locations>
                <Location
                   uuid = "9D27D66D-BE43-4B02-B112-33AFA88AEE75 - 31dfff20336de35d"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "marleyspoonlist.RecipiesView.__allocating_init() -&gt; marleyspoonlist.RecipiesView"
@@ -50,7 +50,7 @@
                </Location>
                <Location
                   uuid = "9D27D66D-BE43-4B02-B112-33AFA88AEE75 - 3fb408f28cd4463d"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "marleyspoonlist.RecipiesView.init() -&gt; marleyspoonlist.RecipiesView"
@@ -64,6 +64,118 @@
                   offsetFromSymbolStart = "29">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE7E1811-334D-45BB-A2DE-44835F1729AD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "marleyspoonlist/Modules/RecipiesList/RecepiesListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AE7E1811-334D-45BB-A2DE-44835F1729AD - 83a38a1b63a1df1b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;marleyspoonlist.Recipe&gt;) -&gt; Swift.Array&lt;marleyspoonlist.RecipiesSection&gt; in marleyspoonlist.RecepiesListViewController.(bindViewModel in _9F649F2C8AC9980E3BBA3DC5A34C715C)() -&gt; ()"
+                  moduleName = "marleyspoonlist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aidamdv/Downloads/Tests/marleyspoonlist/marleyspoonlist/Modules/RecipiesList/RecepiesListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "458">
+               </Location>
+               <Location
+                  uuid = "AE7E1811-334D-45BB-A2DE-44835F1729AD - fd411ad396ab68c4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (marleyspoonlist.Recipe) -&gt; Swift.Optional&lt;marleyspoonlist.Tag&gt; in closure #2 (Swift.Array&lt;marleyspoonlist.Recipe&gt;) -&gt; Swift.Array&lt;marleyspoonlist.RecipiesSection&gt; in marleyspoonlist.RecepiesListViewController.(bindViewModel in _9F649F2C8AC9980E3BBA3DC5A34C715C)() -&gt; ()"
+                  moduleName = "marleyspoonlist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aidamdv/Downloads/Tests/marleyspoonlist/marleyspoonlist/Modules/RecipiesList/RecepiesListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "71">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD3FDB55-AFC6-4977-9A48-71A6CD5E5134"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "marleyspoonlist/Modules/RecipiesList/RecepiesListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7E78E8E-0F3A-45F7-BD2C-265F9F8144EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "marleyspoonlist/Modules/Navigators/RecipiesNavigator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "goToRecipeDetails(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB7DD93B-FF6B-4B76-8ECC-9A8BB6EE9013"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "marleyspoonlist/Modules/RecipeDetails/RecipieDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "init(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "960EDD74-7965-4A89-9505-C48FB0566606"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "marleyspoonlist/Modules/RecipeDetails/RecipieDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "setView(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

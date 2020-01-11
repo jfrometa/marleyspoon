@@ -26,7 +26,7 @@ final class Recipe: EntryDecodable, FieldKeysQueryable {
     let description: String?
 
     var chefName: String {
-        return " \(self.chef?.name ?? ""))"
+        return "Chef \(self.chef?.name ?? "")"
     }
     
     var _description: String {

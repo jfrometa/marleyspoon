@@ -11,8 +11,8 @@ import RxCocoa
 import RxSwift
 
 class RecipiesListViewModel: ViewModelType {
-     private let provider: ContentfulManager!
      let navigator: RecipiesNavigator!
+     private let provider: ContentfulManager!
      private let disposeBag = DisposeBag()
     
     init(navigator: RecipiesNavigator, provider: ContentfulManager) {
@@ -25,13 +25,28 @@ class RecipiesListViewModel: ViewModelType {
     }
 
     struct Output {
+      let fetching: Driver<Bool>
       let data: Driver<[Recipe]>
     }
     
   func transform(input: RecipiesListViewModel.Input) -> RecipiesListViewModel.Output {
+    let fetching = PublishSubject<Bool>()
     
-    let data = provider.getRecepies.asDriver(onErrorJustReturn: [])
-    return Output(data: data)
+    let data = input.trigger
+        .flatMap { [weak self] _ -> Driver<[Recipe]> in
+            guard let _self = self else { return  Driver<[Recipe]>.just([])}
+            let data = _self.provider
+               .getRecepies
+               .do(onNext: { _ in
+                   fetching.onNext(true)
+                }, onError: { _ in
+                   fetching.onNext(false)
+                }, onCompleted: {
+                   fetching.onNext(false)
+            })
+            .asDriver(onErrorJustReturn: [])
+            return data
+        }
+    return Output(fetching: fetching.asDriverOnErrorJustComplete(), data: data)
   }
-    
 }

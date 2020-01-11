@@ -15,10 +15,23 @@ import Cartography
 
 class RecepiesListViewController: UIViewController {
     private let viewModel: RecipiesListViewModel!
-    private let disposebag = DisposeBag()
     private let _view = RecipiesView()
+    private let disposebag = DisposeBag()
     
-    private var dataSoruceRef: RxTableViewSectionedReloadDataSource<RecipiesSection>?
+    private lazy var dataSource = RxTableViewSectionedReloadDataSource<RecipiesSection>(
+         configureCell: { [weak self] _, _, indexPath, recipe in
+           guard let _self = self else { return UITableViewCell() }
+           
+           let cell = _self._view
+               .tableView
+               .dequeueReusableCell(withIdentifier: RecipeCellView.id,
+                                  for: indexPath) as! RecipeCellView
+           
+           cell.recipe = recipe
+           cell.onClickListener = { _self.viewModel.navigator.goToRecipeDetails(recipe) }
+           return cell
+         }
+       )
     
     init(with model: RecipiesListViewModel) {
         self.viewModel = model
@@ -41,8 +54,8 @@ class RecepiesListViewController: UIViewController {
     }
     
     private func setupView(){
-        self.view.backgroundColor = .clear
-        self._view.backgroundColor = .blue
+        self.view.backgroundColor = .white
+        self._view.backgroundColor = .white
         self.view.addSubview(self._view)
         
         constrain(_view) {
@@ -55,25 +68,11 @@ class RecepiesListViewController: UIViewController {
     }
     
     private func bindViewModel(){
-        let dataSource = RxTableViewSectionedReloadDataSource<RecipiesSection>(
-          configureCell: { [weak self] _, _, indexPath, recipe in
-            guard let _self = self else { return UITableViewCell() }
-            
-            let cell = self?._view
-                .tableView
-                .dequeueReusableCell(withIdentifier: RecipeCellView.id, for: indexPath) as! RecipeCellView
-            
-            cell.recipe = recipe
-            cell.onClickListener = { _self.viewModel.navigator.goToRecipeDetails(recipe) }
-            return cell
-          }
-        )
+        _view.tableView.rx.setDelegate(self).disposed(by: disposebag)
         
-        dataSoruceRef = dataSource
-
         let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
-            .mapToVoid()
-            .asDriverOnErrorJustComplete()
+          .mapToVoid()
+          .asDriverOnErrorJustComplete()
 
         let pull = _view.tableView.refreshControl!.rx
           .controlEvent(.valueChanged)
@@ -84,111 +83,64 @@ class RecepiesListViewController: UIViewController {
 
         let output = viewModel.transform(input: input)
 
-//        output.fetching
-//          .drive(_view.tableView.refreshControl!.rx.isRefreshing)
-//          .disposed(by: disposebag)
+        output.fetching
+          .drive(_view.tableView.refreshControl!.rx.isRefreshing)
+          .disposed(by: disposebag)
 
-        _view.tableView.rx.setDelegate(self).disposed(by: disposebag)
-        output.data.map { recipies in
-          if recipies.count == 0 { return [] }
-
-          // get all unique titles
-            let dateTitle = recipies.compactMap { $0.tags?.first }
-
-          // format the new data
-          var recipeMap: [RecipiesSection] = dateTitle.map {
-            title -> RecipiesSection in
-            let recipiesByName = recipies
-              .filter { (details) -> Bool in
-                guard let tag = details.tags?.first else { return false }
-                return tag.name == title.name
-              }
-
-            return RecipiesSection(header: title.name!, items: recipiesByName)
-          }
-
-          var currentDataSource: [RecipiesSection] = dataSource.sectionModels
-          if let currentLast = dataSource.sectionModels.last {
-            // find out if it has items to append
-            let hasItemsForLastSection = recipeMap.contains(where: { (section) -> Bool in
-              currentLast.header == section.header
-            })
-
-            if hasItemsForLastSection {
-              // append to last section
-              let movementsIndex = recipeMap
-                .lastIndex(where: { $0.header == currentLast.header })
-
-              let dataSourceIndex = currentDataSource
-                .lastIndex(where: { $0.header == currentLast.header })
-
-              var mutableList: [RecipiesSection.Item] = []
-              mutableList.append(contentsOf: currentLast.items)
-              mutableList.append(contentsOf: recipeMap[movementsIndex!].items)
-
-              currentDataSource[dataSourceIndex!].items = mutableList
-
-              // remove appended map
-              _ = recipeMap.remove(at: movementsIndex!)
-
-              // add next sections
-              if !recipeMap.isEmpty {
-                recipeMap.forEach { currentDataSource.append($0) }
-              }
-
-            } else {
-              currentDataSource.append(contentsOf: recipeMap)
-            }
-          } else {
-            currentDataSource.append(contentsOf: recipeMap)
-          }
-          return currentDataSource
+        output.data
+          .distinctUntilChanged { $0.count == $1.count }
+          .map { [weak self] recipies in
+            guard let _self = self else { return self?.dataSource.sectionModels ?? [] }
+            if recipies.count == 0 { return [] }
+              
+            var notSoHappyButFitRecipies = RecipiesSection(header: "Under 500 Calories",
+                                                           items: [Recipe]())
+            var happyRecipies =  RecipiesSection(header: "Full Belly = Happy Heart",
+                                                  items: [Recipe]())
+            recipies
+                .sorted(by: { guard let r1 = $0.calories, let r2 = $1.calories
+                    else { return false }
+                    return r1 > r2
+                }) .filter { $0.calories != nil }
+                .forEach {
+                    ($0.calories! >= 500) ?
+                    happyRecipies.items.append($0) : notSoHappyButFitRecipies.items.append($0)
+                }
+            
+            var currentDataSource = _self.dataSource.sectionModels
+               
+            notSoHappyButFitRecipies.items.count > 0 ?
+                currentDataSource.append(notSoHappyButFitRecipies) : nil
+              
+            happyRecipies.items.count > 0 ?
+                currentDataSource.append(happyRecipies) : nil
+  
+            return currentDataSource
         }
-        .drive(_view.tableView.rx.items(dataSource: dataSource))
+        .drive(_view.tableView.rx.items(dataSource: self.dataSource))
         .disposed(by: disposebag)
-        
     }
 }
 
 extension RecepiesListViewController: UITableViewDelegate {
   func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    return setHeaderForSection(section: section)
+    return getHeader { $0.attributedText = dataSource[section].header.attributed(26) }
   }
-
-  func tableView(_: UITableView, heightForHeaderInSection _: Int) -> CGFloat {
-    return 64
-  }
-
-  func tableView(_: UITableView, estimatedHeightForHeaderInSection _: Int) -> CGFloat {
-    return 64
-  }
-
-  func getHeaderViewLabel(with label: (UILabel) -> Void) -> UIView {
+  func getHeader(with label: (UILabel) -> Void) -> UIView {
     let header = UIView()
-    let lblTitle = UILabel()
+    let title = UILabel()
 
-    header.addSubview(lblTitle)
+    header.addSubview(title)
     header.backgroundColor = .white
-    constrain(header, lblTitle) {
-      h, l in
-
-      l.top == h.top + 8
-      l.leading == h.leading + 17
-      l.bottom == h.bottom - 8
+    
+    constrain(header, title) { header, title in
+      title.top == header.top + 8
+      title.centerX == header.centerX
+      title.bottom == header.bottom - 8
     }
 
-    label(lblTitle)
+    label(title)
     return header
-  }
-
-  func setheaderTitle(title: UILabel, section: Int) {
-    title.attributedText = dataSoruceRef?[section].header.attributed()
-  }
-
-  func setHeaderForSection(section: Int) -> UIView {
-    return getHeaderViewLabel { lblTitle in
-      setheaderTitle(title: lblTitle, section: section)
-    }
   }
 }
 

@@ -24,8 +24,7 @@ class RecipiesView: UIView {
     private func setView() {
       self.backgroundColor = .clear
       tableView.refreshControl = UIRefreshControl()
-      tableView.backgroundColor = .white
-      tableView.tag = 2
+      tableView.backgroundColor = .clear
       tableView.separatorStyle = .none
       tableView.register(RecipeCellView.self, forCellReuseIdentifier: RecipeCellView.id)
       tableView.allowsSelection = false
@@ -33,12 +32,12 @@ class RecipiesView: UIView {
 
       addSubview(tableView)
 
-      constrain(tableView) { list in
-        guard let sv = list.superview else { return }
-        list.top == sv.top
-        list.leading == sv.leading
-        list.trailing == sv.trailing
-        list.bottom == sv.bottom
+      constrain(tableView) { tableView in
+        guard let sv = tableView.superview else { return }
+        tableView.top == sv.top
+        tableView.leading == sv.leading
+        tableView.trailing == sv.trailing
+        tableView.bottom == sv.bottom
       }
     }
 }

@@ -26,7 +26,6 @@
 		8EEE0E9623C7DB0500001AF8 /* RecipiesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9523C7DB0500001AF8 /* RecipiesNavigator.swift */; };
 		8EEE0E9823C7E04400001AF8 /* RecipiesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9723C7E04400001AF8 /* RecipiesSection.swift */; };
 		8EEE0E9B23C7E12B00001AF8 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9A23C7E12B00001AF8 /* RecipeDetailsViewController.swift */; };
-		8EEE0E9D23C7E13E00001AF8 /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9C23C7E13E00001AF8 /* RecipeDetailsViewModel.swift */; };
 		8EEE0E9F23C7E14C00001AF8 /* RecipieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0E9E23C7E14C00001AF8 /* RecipieDetailsView.swift */; };
 		8EEE0EA223C8287200001AF8 /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0EA123C8287200001AF8 /* RecipeCellView.swift */; };
 		8EEE0EA423C82CE800001AF8 /* StringToAttributedText+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE0EA323C82CE800001AF8 /* StringToAttributedText+ext.swift */; };
@@ -84,7 +83,6 @@
 		8EEE0E9523C7DB0500001AF8 /* RecipiesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesNavigator.swift; sourceTree = "<group>"; };
 		8EEE0E9723C7E04400001AF8 /* RecipiesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesSection.swift; sourceTree = "<group>"; };
 		8EEE0E9A23C7E12B00001AF8 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
-		8EEE0E9C23C7E13E00001AF8 /* RecipeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModel.swift; sourceTree = "<group>"; };
 		8EEE0E9E23C7E14C00001AF8 /* RecipieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieDetailsView.swift; sourceTree = "<group>"; };
 		8EEE0EA123C8287200001AF8 /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
 		8EEE0EA323C82CE800001AF8 /* StringToAttributedText+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringToAttributedText+ext.swift"; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				8EEE0E9A23C7E12B00001AF8 /* RecipeDetailsViewController.swift */,
-				8EEE0E9C23C7E13E00001AF8 /* RecipeDetailsViewModel.swift */,
 				8EEE0E9E23C7E14C00001AF8 /* RecipieDetailsView.swift */,
 			);
 			path = RecipeDetails;
@@ -530,7 +527,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EEE0E9323C7DA7900001AF8 /* ViewModelType.swift in Sources */,
-				8EEE0E9D23C7E13E00001AF8 /* RecipeDetailsViewModel.swift in Sources */,
 				8EEE0E8F23C7D90600001AF8 /* RecipiesListViewModel.swift in Sources */,
 				8EEE0E8A23C7C7B700001AF8 /* Tag.swift in Sources */,
 				8EEE0E9B23C7E12B00001AF8 /* RecipeDetailsViewController.swift in Sources */,

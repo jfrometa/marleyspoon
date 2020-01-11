@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RecipiesNavigator {
-    func goToRecipies(with viewModel: RecipiesListViewModel)
+    func goToRecipies()
     func goToRecipeDetails(_ recipe: Recipe)
 }
 
@@ -20,7 +20,7 @@ class DefaultRecipiesNavigator: RecipiesNavigator {
       self.navigationController = navigationController
     }
     
-    func goToRecipies(with viewModel: RecipiesListViewModel) {
+    func goToRecipies() {
          let navigator = self
          let model = RecipiesListViewModel(navigator: navigator, provider: ContentfulManager.shared)
          let vc = RecepiesListViewController(with: model)
@@ -28,6 +28,9 @@ class DefaultRecipiesNavigator: RecipiesNavigator {
     }
     
     func goToRecipeDetails(_ recipe: Recipe) {
-        print("goToRecipeDetails : \(recipe)")
+        NSLog("goToRecipeDetails : \(recipe.title)")
+        
+        let vc = RecipieDetailsViewController(recipe)
+        navigationController.pushViewController(vc, animated: true)
     }
 }

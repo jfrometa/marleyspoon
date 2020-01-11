@@ -18,6 +18,7 @@ class RecipeCellView: UITableViewCell {
     title.isEnabled = false
     title.textAlignment = .left
     title.backgroundColor = .clear
+    title.numberOfLines = 0
     title.attributedText = "TITLE !@#".attributed()
     return title
   }()
@@ -29,7 +30,7 @@ class RecipeCellView: UITableViewCell {
   }()
     
     
-  let container: UIView = {
+  private let container: UIView = {
       let view = UIView()
 
       view.backgroundColor = UIColor.white
@@ -42,8 +43,6 @@ class RecipeCellView: UITableViewCell {
       view.layer.cornerRadius = 10
       return view
   }()
-
-  var onClickListener: (() -> Void)?
    
   var recipe: Recipe? {
     didSet{
@@ -53,6 +52,7 @@ class RecipeCellView: UITableViewCell {
         self.ivIcon.setImageToNaturalHeight(fromAsset: photo)
     }
   }
+    
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
@@ -62,6 +62,7 @@ class RecipeCellView: UITableViewCell {
     setView()
   }
 
+  var onClickListener: (() -> Void)?
   @objc func onPress() {
     guard let onClick = self.onClickListener else { return }
     onClick()
@@ -69,30 +70,34 @@ class RecipeCellView: UITableViewCell {
     
   private func setView() {
     
-    addSubview(container)
-    constrain(container) { container in
-      guard let sv = container.superview else { return }
-      container.height == 65
-      container.top == sv.top
-      container.bottom == sv.bottom
-      container.leading == sv.leading
-      container.trailing == sv.trailing
-    }
-
+    self.addSubview(container)
     container.addSubview(ivIcon)
     container.addSubview(lblTitle)
     container.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onPress)))
     
-    constrain(ivIcon, lblTitle) {  ivIcon, lblTitle in
-      guard let sv = ivIcon.superview else { return }
-      ivIcon.height == 40
-      ivIcon.width == 40
-      ivIcon.centerY == sv.centerY
-      ivIcon.leading == sv.leading + 16
+    constrain(ivIcon, lblTitle, container) { ivIcon, lblTitle, container in
+      guard let sv = container.superview else { return }
+      
+      let imageWidth: CGFloat = (screen.width - 32)
+      let horizontalMargin: CGFloat = 16
+      let verticalMargin: CGFloat = 8
+        
+      container.top == sv.top
+      container.bottom == sv.bottom
+      container.leading == sv.leading
+      container.trailing == sv.trailing
+ 
+      ivIcon.width == imageWidth
+      ivIcon.height == (ivIcon.width * 0.63)
+        
+      ivIcon.top == container.top + verticalMargin
+      ivIcon.leading == container.leading + horizontalMargin
+      ivIcon.leading == container.trailing - horizontalMargin
 
-      lblTitle.top == ivIcon.top + 0.5
-      lblTitle.leading == ivIcon.trailing + 5
-      lblTitle.trailing == sv.trailing - 16
+      lblTitle.top == ivIcon.bottom + verticalMargin
+      lblTitle.leading == container.leading + horizontalMargin
+      lblTitle.trailing == container.trailing - horizontalMargin
+      lblTitle.bottom == container.bottom - verticalMargin
     }
   }
 }
