@@ -37,6 +37,8 @@ class RecipieDetailsViewController : UIViewController {
     }
     
     private func setTitle(title: String, color: UIColor = .black) {
+           self.navigationController?.navigationBar.tintColor = UIColor.darkerGray;
+        
            let navigationBarLabel = UILabel()
            navigationBarLabel.attributedText = title.attributed(22)
            navigationItem.titleView = navigationBarLabel
