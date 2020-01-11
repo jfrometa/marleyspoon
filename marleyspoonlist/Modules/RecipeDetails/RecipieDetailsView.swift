@@ -16,9 +16,10 @@ class RecipieDetailsView: UIView {
     
     let svTags: UIStackView = {
        let stackView = UIStackView()
+        stackView.spacing = 8
        stackView.axis = .horizontal
-       stackView.alignment = .center
-       stackView.distribution = .equalSpacing
+        stackView.alignment = .firstBaseline
+      stackView.distribution = .fillProportionally
        return stackView
      }()
     
@@ -35,7 +36,7 @@ class RecipieDetailsView: UIView {
     private let lblTitle: UILabel = {
       var title = UILabel()
       title.isEnabled = false
-      title.textAlignment = .left
+      title.textAlignment = .center
       title.backgroundColor = .clear
       title.numberOfLines = 6
       title.attributedText = "TITLE !@#".attributed(26)
@@ -100,7 +101,7 @@ class RecipieDetailsView: UIView {
       self.lblDescription.attributedText = recipe.description?.attributed()
       
       if let calories = recipe.calories {
-        self.lblCategory.attributedText = "Calories: \(calories)".attributed()
+        self.lblCategory.attributedText = "Calories: \(calories)".attributed(24, .pink)
       }
         
       if let tags = recipe.tags {  tags.forEach {
@@ -141,19 +142,19 @@ class RecipieDetailsView: UIView {
     
     func getBox(with title: String) -> UIView {
        let box = UIView()
-       box.backgroundColor = .lightGray
+       box.backgroundColor = .superLightGray
         
        let tag = UILabel()
-       tag.attributedText = title.attributed(13, .darkerGray)
+       tag.attributedText = title.attributed(15, .darkerGray)
         
        box.addSubview(tag)
        constrain(tag) {
            guard let sv = $0.superview else { return }
-            sv.height == 26
-            $0.top == sv.top
-            $0.bottom == sv.bottom
-            $0.leading == sv.leading
-            $0.trailing == sv.trailing
+            sv.height == 52
+            $0.top == sv.top + 8
+            $0.bottom == sv.bottom - 12
+            $0.leading == sv.leading + 12
+            $0.trailing == sv.trailing - 8
         }
         
        return box

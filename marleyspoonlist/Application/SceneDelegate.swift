@@ -28,6 +28,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.navigationController = UINavigationController(rootViewController: vc)
         navigator.navigationController = self.navigationController
             
+        // ignores the user theme settings and enforces .lightMode
+        if #available(iOS 13.0, *) {
+          window?.overrideUserInterfaceStyle = .light
+        }
+        
         window?.rootViewController = self.navigationController
         window?.makeKeyAndVisible()
     }
