@@ -16,10 +16,10 @@ class RecipeCellView: UITableViewCell {
   private let lblTitle: UILabel = {
     var title = UILabel()
     title.isEnabled = false
-    title.textAlignment = .left
+    title.textAlignment = .center
     title.backgroundColor = .clear
     title.numberOfLines = 0
-    title.attributedText = "TITLE !@#".attributed()
+    title.attributedText = "".attributed()
     return title
   }()
 
@@ -32,21 +32,13 @@ class RecipeCellView: UITableViewCell {
     
   private let container: UIView = {
       let view = UIView()
-
-      view.backgroundColor = UIColor.white
-      view.layer.masksToBounds = false
-      view.layer.shadowColor = UIColor.black.cgColor
-      view.layer.shadowOpacity = 0.1
-      view.layer.shadowOffset = CGSize(width: 0, height: 2)
-      view.layer.shadowRadius = 2
-      view.layer.rasterizationScale = UIScreen.main.scale
-      view.layer.cornerRadius = 10
+      view.backgroundColor = UIColor.lightGray
       return view
   }()
    
   var recipe: Recipe? {
     didSet{
-        self.lblTitle.attributedText = recipe?.title.attributed()
+        self.lblTitle.attributedText = recipe?.title.attributed(17, .darkerGray)
         
         guard let photo = recipe?.photo else { return }
         self.ivIcon.setImageToNaturalHeight(fromAsset: photo)
@@ -78,9 +70,9 @@ class RecipeCellView: UITableViewCell {
     constrain(ivIcon, lblTitle, container) { ivIcon, lblTitle, container in
       guard let sv = container.superview else { return }
       
-      let imageWidth: CGFloat = (screen.width - 32)
+      let imageWidth: CGFloat = screen.width 
       let horizontalMargin: CGFloat = 16
-      let verticalMargin: CGFloat = 8
+      let verticalMargin: CGFloat = 12
         
       container.top == sv.top
       container.bottom == sv.bottom
@@ -90,9 +82,9 @@ class RecipeCellView: UITableViewCell {
       ivIcon.width == imageWidth
       ivIcon.height == (ivIcon.width * 0.63)
         
-      ivIcon.top == container.top + verticalMargin
-      ivIcon.leading == container.leading + horizontalMargin
-      ivIcon.leading == container.trailing - horizontalMargin
+      ivIcon.top == container.top
+      ivIcon.leading == container.leading
+      ivIcon.leading == container.trailing
 
       lblTitle.top == ivIcon.bottom + verticalMargin
       lblTitle.leading == container.leading + horizontalMargin

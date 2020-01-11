@@ -44,7 +44,6 @@ class RecepiesListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
-      navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewDidLoad() {
@@ -53,9 +52,16 @@ class RecepiesListViewController: UIViewController {
         self.bindViewModel()
     }
     
+    private func setTitle(title: String, color: UIColor = .black) {
+        let navigationBarLabel = UILabel()
+        navigationBarLabel.attributedText = title.attributed(22)
+        navigationItem.titleView = navigationBarLabel
+      }
+    
     private func setupView(){
-        self.view.backgroundColor = .white
-        self._view.backgroundColor = .white
+        setTitle(title: "Marley Spoon")
+        self.view.backgroundColor = .lightGray
+        self._view.backgroundColor = .lightGray
         self.view.addSubview(self._view)
         
         constrain(_view) {
@@ -93,9 +99,9 @@ class RecepiesListViewController: UIViewController {
             guard let _self = self else { return self?.dataSource.sectionModels ?? [] }
             if recipies.count == 0 { return [] }
               
-            var notSoHappyButFitRecipies = RecipiesSection(header: "Under 500 Calories",
+            var notSoHappyButFitRecipies = RecipiesSection(header: "The Fitness Stuff",
                                                            items: [Recipe]())
-            var happyRecipies =  RecipiesSection(header: "Full Belly = Happy Heart",
+            var happyRecipies =  RecipiesSection(header: "The Gordito Stuff",
                                                   items: [Recipe]())
             recipies
                 .sorted(by: { guard let r1 = $0.calories, let r2 = $1.calories
@@ -124,8 +130,15 @@ class RecepiesListViewController: UIViewController {
 
 extension RecepiesListViewController: UITableViewDelegate {
   func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    return getHeader { $0.attributedText = dataSource[section].header.attributed(26) }
+    let header = getHeader { $0.attributedText = dataSource[section].header.attributed(26) }
+    header.backgroundColor = ((section == 0) ? .pink : .yellow)
+    return header
   }
+  
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 54
+    }
+    
   func getHeader(with label: (UILabel) -> Void) -> UIView {
     let header = UIView()
     let title = UILabel()
@@ -134,9 +147,9 @@ extension RecepiesListViewController: UITableViewDelegate {
     header.backgroundColor = .white
     
     constrain(header, title) { header, title in
-      title.top == header.top + 8
+      title.top == header.top
       title.centerX == header.centerX
-      title.bottom == header.bottom - 8
+      title.bottom == header.bottom
     }
 
     label(title)

@@ -36,7 +36,15 @@ class RecipieDetailsViewController : UIViewController {
         self.setupView()
     }
     
+    private func setTitle(title: String, color: UIColor = .black) {
+           let navigationBarLabel = UILabel()
+           navigationBarLabel.attributedText = title.attributed(22)
+           navigationItem.titleView = navigationBarLabel
+    }
+       
     private func setupView(){
+          
+        self.setTitle(title: "Recipe Details")
         self.view.backgroundColor = .white
         self._view.backgroundColor = .white
         self.view.addSubview(self._view)

@@ -98,13 +98,21 @@ class RecipieDetailsView: UIView {
       self.lblTitle.attributedText = recipe.title.attributed()
       self.lblChefName.attributedText = recipe.chefName.attributed()
       self.lblDescription.attributedText = recipe.description?.attributed()
+      
       if let calories = recipe.calories {
         self.lblCategory.attributedText = "Calories: \(calories)".attributed()
       }
+        
+      if let tags = recipe.tags {  tags.forEach {
+            let box = self.getBox(with: $0.name ?? "tag")
+            self.svTags.addArrangedSubview(box)
+        }
+      }
          
-      guard let photo = recipe.photo else { return }
-      self.imageView.setImageToNaturalHeight(fromAsset: photo)
-         
+      if let photo = recipe.photo {
+        self.imageView.setImageToNaturalHeight(fromAsset: photo)
+      }
+ 
       container.addArrangedSubview(lblCategory)
       container.addArrangedSubview(lblTitle)
       container.addArrangedSubview(lblChefName)
@@ -131,4 +139,23 @@ class RecipieDetailsView: UIView {
            }
     }
     
+    func getBox(with title: String) -> UIView {
+       let box = UIView()
+       box.backgroundColor = .lightGray
+        
+       let tag = UILabel()
+       tag.attributedText = title.attributed(13, .darkerGray)
+        
+       box.addSubview(tag)
+       constrain(tag) {
+           guard let sv = $0.superview else { return }
+            sv.height == 26
+            $0.top == sv.top
+            $0.bottom == sv.bottom
+            $0.leading == sv.leading
+            $0.trailing == sv.trailing
+        }
+        
+       return box
+    }
 }

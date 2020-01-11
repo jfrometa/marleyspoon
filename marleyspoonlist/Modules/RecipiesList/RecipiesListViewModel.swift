@@ -11,11 +11,11 @@ import RxCocoa
 import RxSwift
 
 class RecipiesListViewModel: ViewModelType {
-     let navigator: RecipiesNavigator!
+     let navigator: DefaultRecipiesNavigator!
      private let provider: ContentfulManager!
      private let disposeBag = DisposeBag()
     
-    init(navigator: RecipiesNavigator, provider: ContentfulManager) {
+    init(navigator: DefaultRecipiesNavigator, provider: ContentfulManager) {
       self.navigator = navigator
       self.provider = provider
     }
